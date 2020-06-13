@@ -17,6 +17,10 @@ public class myAppTester {
 	  reverseMethod(n);
 	  System.out.println();
 
+	  String str = "This is CSIS 3275 S.E Lab3";
+	  String reversed = reverseString(str);
+      System.out.println("The reversed string is: " + reversed);
+
 	  // add a line below to call your myTestMethod from here  then remove the block comment symbols  
 
 	}
@@ -34,14 +38,13 @@ public class myAppTester {
 	   }
 
 
-	   /* 
-	       add your test method in this space then remove the block comment symbols
-	       public static void myTestMethod(...){
-
-            
-
-		   }
-	 
-	   */
+	   // My New Method
+	   public static String reverseString(String str)
+	   {
+		   if (str.isEmpty())
+			   return str;
+		   //Calling Function Recursively
+		   return reverseString(str.substring(1)) + str.charAt(0);
+	   }
 
 }
